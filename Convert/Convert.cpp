@@ -13,7 +13,9 @@ namespace CSP {
 	namespace Convert {
 
 		static short ToInt16(string value) {
-			return stoi(value);
+			int a = stoi(value);
+			short b;
+			return b = a;
 		}
 
 		static int ToInt32(string value) {
@@ -23,6 +25,8 @@ namespace CSP {
 		static long ToInt64(string value) {
 			return stol(value);
 		}
-
+		static double ToDouble(string value) {
+			return stod(value);
+		}
 	}
 }
