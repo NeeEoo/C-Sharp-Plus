@@ -1,10 +1,4 @@
 #include "stdafx.h"
-#include <sstream>
-#include <iostream>
-#include <string>
-#include <chrono>
-#include "windows.h"
-#include <ctime>
 
 using std::string;
 using namespace std;
@@ -25,6 +19,7 @@ namespace CSP {
 		static long ToInt64(string value) {
 			return stol(value);
 		}
+
 		static double ToDouble(string value) {
 			return stod(value);
 		}

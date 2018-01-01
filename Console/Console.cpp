@@ -1,10 +1,8 @@
 #include "stdafx.h"
-#include <sstream>
 #include <iostream>
 #include <string>
 #include <chrono>
 #include "windows.h"
-#include <ctime>
 
 using std::string;
 using namespace std;
