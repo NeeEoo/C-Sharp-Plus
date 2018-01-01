@@ -6,6 +6,7 @@
 
 using std::string;
 using namespace std;
+
 namespace Console {
 
 	void WriteLine(string value) {
