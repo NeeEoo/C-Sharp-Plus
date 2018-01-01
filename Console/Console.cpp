@@ -4,6 +4,7 @@
 #include <string>
 #include <chrono>
 #include "windows.h"
+#include <ctime>
 
 using std::string;
 using namespace std;
@@ -57,7 +58,7 @@ namespace CSP {
 		}
 		static void SetCursorPosition(int x, int y)
 		{
-			COORD p = { x, y };
+			COORD p = {x, y};
 			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
 		}
 	}
