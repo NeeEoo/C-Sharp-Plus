@@ -28,11 +28,11 @@ namespace CSP {
 		}
 		static void Clear()
 		{
-			HANDLE                     hStdOut;
-			CONSOLE_SCREEN_BUFFER_INFO csbi;
-			DWORD                      count;
-			DWORD                      cellCount;
-			COORD                      homeCoords = { 0, 0 };
+			HANDLE						hStdOut;
+			CONSOLE_SCREEN_BUFFER_INFO	csbi;
+			DWORD						count;
+			DWORD						cellCount;
+			COORD						homeCoords = {0, 0};
 
 			hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 			if (hStdOut == INVALID_HANDLE_VALUE) {
