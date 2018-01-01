@@ -54,7 +54,11 @@ namespace CSP {
 				return;
 			}
 			SetConsoleCursorPosition(hStdOut, homeCoords);
-
+		}
+		static void SetCursorPosition(int x, int y)
+		{
+			COORD p = { x, y };
+			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
 		}
 	}
 }
