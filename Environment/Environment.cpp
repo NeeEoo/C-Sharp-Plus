@@ -8,7 +8,7 @@ using namespace std;
 
 namespace CSP {
 	namespace Environment {
-		static string UserName() {
+		const string PrivateUserName() {
 			TCHAR name[UNLEN + 1];
 			DWORD size = UNLEN + 1;
 
@@ -16,5 +16,7 @@ namespace CSP {
 			wstring wStr = name;
 			return string(wStr.begin(), wStr.end());
 		}
+		static const string UserName = PrivateUserName();
+		//static const string UserNameS = GetUserName((TCHAR*)name[257], (LPDWORD)257);
 	}
 }
