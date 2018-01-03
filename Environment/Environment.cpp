@@ -13,6 +13,7 @@ using namespace std;
 #define ENVNEWLINE "\n" // Mac OS X uses \n
 #endif
 namespace CSP {
+	//using System;
 	namespace Environment {
 		const string PrivateUserName() {
 			TCHAR name[UNLEN + 1];

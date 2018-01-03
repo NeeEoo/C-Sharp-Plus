@@ -7,6 +7,7 @@ using std::string;
 using namespace std;
 
 namespace CSP {
+	//using System;
 	class Console {
 	public:
 		static void WriteLine(string value) {

@@ -4,6 +4,7 @@ using std::string;
 using namespace std;
 
 namespace CSP {
+	//using System;
 	class Convert {
 		static inline bool is_base64(unsigned char c) {
 			return (isalnum(c) || (c == '+') || (c == '/'));

@@ -4,6 +4,7 @@ using std::string;
 using namespace std;
 
 namespace CSP {
+	//using System.Diagnostics;
 	class Process {
 	public:
 		///<summary>WARNING: Would want something other than system();</summary>
