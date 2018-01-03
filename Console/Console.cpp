@@ -8,8 +8,8 @@ using std::string;
 using namespace std;
 
 namespace CSP {
-	namespace Console {
-
+	class Console {
+	public:
 		static void WriteLine(string value) {
 			cout << value << "\n";
 		}
@@ -38,13 +38,13 @@ namespace CSP {
 			CONSOLE_SCREEN_BUFFER_INFO	csbi;
 			DWORD						count;
 			DWORD						cellCount;
-			COORD						homeCoords = {0, 0};
+			COORD						homeCoords = { 0, 0 };
 
 			hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 			if (hStdOut == INVALID_HANDLE_VALUE) {
 				return;
 			}
-			
+
 			if (!(GetConsoleScreenBufferInfo(hStdOut, &csbi))) {
 				return;
 			}
@@ -65,5 +65,5 @@ namespace CSP {
 			COORD p = { x, y };
 			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
 		}
-	}
+	};
 }
