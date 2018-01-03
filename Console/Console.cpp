@@ -13,12 +13,18 @@ namespace CSP {
 		static void WriteLine(string value) {
 			cout << value << "\n";
 		}
+		static void WriteLine(int value) {
+			cout << value << "\n";
+		}
 
 		static void WriteLine() {
 			cout << "\n";
 		}
 
 		static void Write(string value) {
+			cout << value;
+		}
+		static void Write(int value) {
 			cout << value;
 		}
 		static string ReadLine() {
