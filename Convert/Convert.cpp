@@ -1,11 +1,15 @@
 #include "stdafx.h"
+#include <functional>
 
 using std::string;
 using namespace std;
 
 namespace CSP {
-	namespace Convert {
-
+	class Convert {
+		static inline bool is_base64(unsigned char c) {
+			return (isalnum(c) || (c == '+') || (c == '/'));
+		}
+	public:
 		static short ToInt16(string value) {
 			int a = stoi(value);
 			short b;
@@ -23,17 +27,34 @@ namespace CSP {
 		static double ToDouble(string value) {
 			return stod(value);
 		}
-		static const string base64_chars =
-			"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-			"abcdefghijklmnopqrstuvwxyz"
-			"0123456789+/";
-
-
-		static inline bool is_base64(unsigned char c) {
-			return (isalnum(c) || (c == '+') || (c == '/'));
-		}
-
+        #pragma region ToString()
+			static string ToString(int value) {
+				return to_string(value);
+			}
+			static string ToString(string value) {
+				return value;
+			}
+			static string ToString(long value) {
+				return to_string(value);
+			}
+			static string ToString(short value) {
+				return to_string(value);
+			}
+			static string ToString(char value) {
+				return to_string(value);
+			}
+			static string ToString(float value) {
+				return to_string(value);
+			}
+			static string ToString(double value) {
+				return to_string(value);
+			}
+			static string ToString(byte value) {
+				return to_string(value);
+			}
+        #pragma endregion
 		static string ToBase64String(string encode) {
+			const string base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 			unsigned int in_len = encode.length();
 			unsigned char const* bytes_to_encode;
 			bytes_to_encode = (const unsigned char *)encode.c_str();
@@ -51,27 +72,32 @@ namespace CSP {
 					char_array_4[2] = ((char_array_3[1] & 0x0f) << 2) + ((char_array_3[2] & 0xc0) >> 6);
 					char_array_4[3] = char_array_3[2] & 0x3f;
 
-					for (i = 0; (i <4); i++)
+					for (i = 0; (i < 4); i++) {
 						ret += base64_chars[char_array_4[i]];
+					}
 					i = 0;
 				}
 			}
 
 			if (i)
 			{
-				for (j = i; j < 3; j++)
+				for (j = i; j < 3; j++) {
 					char_array_3[j] = '\0';
+				}
 
 				char_array_4[0] = (char_array_3[0] & 0xfc) >> 2;
 				char_array_4[1] = ((char_array_3[0] & 0x03) << 4) + ((char_array_3[1] & 0xf0) >> 4);
 				char_array_4[2] = ((char_array_3[1] & 0x0f) << 2) + ((char_array_3[2] & 0xc0) >> 6);
 				char_array_4[3] = char_array_3[2] & 0x3f;
 
-				for (j = 0; (j < i + 1); j++)
+				for (j = 0; (j < i + 1); j++) {
 					ret += base64_chars[char_array_4[j]];
+				}
 
-				while ((i++ < 3))
+				while ((i++ < 3)) {
 					ret += '=';
+				}
+
 
 			}
 
@@ -79,6 +105,7 @@ namespace CSP {
 
 		}
 		static string FromBase64String(string const& encoded_string) {
+			const string base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 			int in_len = encoded_string.size();
 			int i = 0;
 			int j = 0;
@@ -116,5 +143,5 @@ namespace CSP {
 			}
 			return ret;
 		}
-	}
+	};
 }
