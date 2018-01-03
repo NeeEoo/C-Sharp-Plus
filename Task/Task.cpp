@@ -5,9 +5,10 @@
 using namespace std;
 
 namespace CSP {
-	namespace Task {
+	class Task {
+	public:
 		static void Delay(int millisecondsDelay) {
 			this_thread::sleep_for(chrono::milliseconds(millisecondsDelay));
 		}
-	}
+	};
 }
