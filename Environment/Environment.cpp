@@ -30,30 +30,9 @@ namespace CSP {
 			wstring wStr = name;
 			return string(wStr.begin(), wStr.end());
 		}
-		BOOL Is64BitOS()
-		{
-			BOOL bIs64BitOS = FALSE;
-
-			// We check if the OS is 64 Bit
-			typedef BOOL(WINAPI *LPFN_ISWOW64PROCESS) (HANDLE, PBOOL);
-
-			LPFN_ISWOW64PROCESS
-				fnIsWow64Process = (LPFN_ISWOW64PROCESS)GetProcAddress(
-					GetModuleHandleA("kernel32"), "IsWow64Process");
-
-			if (NULL != fnIsWow64Process)
-			{
-				if (!fnIsWow64Process(GetCurrentProcess(), &bIs64BitOS))
-				{
-					//error
-				}
-			}
-			return bIs64BitOS;
-		}
 		static const string UserName = PrivateUserName();
 		static const string MachineName = PrivateMachineName();
 		static const string NewLine = ENVNEWLINE;
-		static const int    ProcessorCount = thread::hardware_concurrency();
-		//static const string UserNameS = GetUserName((TCHAR*)name[257], (LPDWORD)257);
+		static const int	ProcessorCount = thread::hardware_concurrency();
 	}
 }
