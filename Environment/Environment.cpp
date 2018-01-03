@@ -5,6 +5,7 @@
 using std::string;
 using std::wstring;
 using namespace std;
+
 #ifdef _WIN32
 #define ENVNEWLINE "\r\n"
 #elif defined macintosh // OS 9
@@ -12,6 +13,7 @@ using namespace std;
 #else
 #define ENVNEWLINE "\n" // Mac OS X uses \n
 #endif
+
 namespace CSP {
 	//using System;
 	namespace Environment {
