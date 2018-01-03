@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include <windows.h>
 
 using std::string;
 using namespace std;

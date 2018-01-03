@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
-#include <chrono>
 #include "windows.h"
 
 using std::string;

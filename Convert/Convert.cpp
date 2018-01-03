@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include <functional>
 
 using std::string;
 using namespace std;
