@@ -20,7 +20,6 @@ namespace CSP {
 		static void WriteLine() {
 			cout << "\n";
 		}
-
 		static void Write(string value) {
 			cout << value;
 		}
@@ -60,9 +59,9 @@ namespace CSP {
 			}
 			SetConsoleCursorPosition(hStdOut, homeCoords);
 		}
-		static void SetCursorPosition(int x, int y)
+		static void SetCursorPosition(int left, int top)
 		{
-			COORD p = { x, y };
+			COORD p = { left, top };
 			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
 		}
 	};
