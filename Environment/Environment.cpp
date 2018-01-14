@@ -33,9 +33,9 @@ namespace CSP {
 			wstring wStr = name;
 			return string(wStr.begin(), wStr.end());
 		}
-		static const string UserName = PrivateUserName();
-		static const string MachineName = PrivateMachineName();
-		static const string NewLine = ENVNEWLINE;
+		static const string	UserName = PrivateUserName();
+		static const string	MachineName = PrivateMachineName();
+		static const string	NewLine = ENVNEWLINE;
 		static const int	ProcessorCount = thread::hardware_concurrency();
 	}
 }
