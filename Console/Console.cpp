@@ -16,7 +16,6 @@ namespace CSP {
 		static void WriteLine(int value) {
 			cout << value << "\n";
 		}
-
 		static void WriteLine() {
 			cout << "\n";
 		}
@@ -63,6 +62,14 @@ namespace CSP {
 		{
 			COORD p = { left, top };
 			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
+		}
+		static bool Title(string const & title)
+		{
+			return SetConsoleTitleA(title.data()) != 0;
+		}
+		static bool Title(wstring const & title)
+		{
+			return SetConsoleTitleW(title.data()) != 0;
 		}
 	};
 }
