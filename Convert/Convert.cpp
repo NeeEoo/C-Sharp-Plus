@@ -15,17 +15,20 @@ namespace CSP {
 			short b;
 			return b = a;
 		}
-
 		static int ToInt32(string value) {
 			return stoi(value);
 		}
-
 		static long ToInt64(string value) {
 			return stol(value);
 		}
-
 		static double ToDouble(string value) {
 			return stod(value);
+		}
+		static bool ToBoolean(bool value) {
+			return value;
+		}
+		static bool ToBoolean(int value) {
+			return (value == 1);
 		}
         #pragma region ToString()
 			static string ToString(int value) {
