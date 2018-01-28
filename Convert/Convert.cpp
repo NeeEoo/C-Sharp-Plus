@@ -1,7 +1,6 @@
 #include "stdafx.h"
 
 using std::string;
-using namespace std;
 
 namespace CSP {
 	//using System;
@@ -10,27 +9,181 @@ namespace CSP {
 			return (isalnum(c) || (c == '+') || (c == '/'));
 		}
 	public:
-		static short ToInt16(string value) {
-			int a = stoi(value);
-			short b;
-			return b = a;
-		}
-		static int ToInt32(string value) {
-			return stoi(value);
-		}
-		static long ToInt64(string value) {
-			return stol(value);
-		}
-		static double ToDouble(string value) {
-			return stod(value);
-		}
-		static bool ToBoolean(bool value) {
-			return value;
-		}
-		static bool ToBoolean(int value) {
-			return (value == 1);
-		}
-        #pragma region ToString()
+		#pragma region ToInt16()
+			static short ToInt16(string value) {
+				int a = stoi(value);
+				short b;
+				return b = a;
+			}
+			static short ToInt16(int value) {
+				int a = value;
+				short b;
+				return b = a;
+			}
+			static short ToInt16(long value) {
+				long a = value;
+				short b;
+				return b = a;
+			}
+			static short ToInt16(char value) {
+				char a = value;
+				short b;
+				return b = a;
+			}
+			static short ToInt16(short value) {
+				return value;
+			}
+			static short ToInt16(float value) {
+				float a = value;
+				short b;
+				return b = a;
+			}
+			static short ToInt16(byte value) {
+				byte a = value;
+				short b;
+				return b = a;
+			}
+			static short ToInt16(double value) {
+				double a = value;
+				short b;
+				return b = a;
+			}
+			static short ToInt16(bool value) {
+				return value ? 1 : 0;
+			}
+		#pragma endregion
+		#pragma region ToInt32()
+			static int ToInt32(string value) {
+				return stoi(value);
+			}
+			static int ToInt32(byte value) {
+				byte a = value;
+				int b;
+				return b = a;
+			}
+			static int ToInt32(long value) {
+				long a = value;
+				int b;
+				return b = a;
+			}
+			static int ToInt32(char value) {
+				char a = value;
+				int b;
+				return b = a;
+			}
+			static int ToInt32(float value) {
+				float a = value;
+				int b;
+				return b = a;
+			}
+			static int ToInt32(double value) {
+				double a = value;
+				int b;
+				return b = a;
+			}
+			static int ToInt32(short value) {
+				short a = value;
+				int b;
+				return b = a;
+			}
+			static int ToInt32(int value) {
+				return value;
+			}
+			static int ToInt32(bool value) {
+				return value ? 1 : 0;
+			}
+		#pragma endregion
+		#pragma region ToInt64()
+			static long ToInt64(string value) {
+				return stol(value);
+			}
+			static long ToInt64(long value) {
+				return value;
+			}
+			static long ToInt64(bool value) {
+				return value ? 1 : 0;
+			}
+			static long ToInt64(byte value) {
+				byte a = value;
+				long b;
+				return b = a;
+			}
+			static long ToInt64(char value) {
+				char a = value;
+				long b;
+				return b = a;
+			}
+			static long ToInt64(float value) {
+				float a = value;
+				long b;
+				return b = a;
+			}
+			static long ToInt64(double value) {
+				double a = value;
+				long b;
+				return b = a;
+			}
+			static long ToInt64(short value) {
+				short a = value;
+				long b;
+				return b = a;
+			}
+			static long ToInt64(int value) {
+				int a = value;
+				long b;
+				return b = a;
+			}
+		#pragma endregion
+		#pragma region ToDouble()
+			static double ToDouble(string value) {
+				return stod(value);
+			}
+			static double ToDouble(double value) {
+				return value;
+			}
+			static double ToDouble(long value) {
+				long a = value;
+				double b;
+				return b = a;
+			}
+			static double ToDouble(bool value) {
+				return value ? 1 : 0;
+			}
+			static double ToDouble(byte value) {
+				byte a = value;
+				double b;
+				return b = a;
+			}
+			static double ToDouble(char value) {
+				char a = value;
+				double b;
+				return b = a;
+			}
+			static double ToDouble(float value) {
+				float a = value;
+				double b;
+				return b = a;
+			}
+			static double ToDouble(short value) {
+				short a = value;
+				double b;
+				return b = a;
+			}
+			static double ToDouble(int value) {
+				int a = value;
+				double b;
+				return b = a;
+			}
+		#pragma endregion
+		#pragma region ToBoolean()
+			static bool ToBoolean(bool value) {
+				return value;
+			}
+			static bool ToBoolean(int value) {
+				return (value == 1);
+			}
+		#pragma endregion
+		#pragma region ToString()
 			static string ToString(int value) {
 				return to_string(value);
 			}
@@ -55,7 +208,7 @@ namespace CSP {
 			static string ToString(byte value) {
 				return to_string(value);
 			}
-        #pragma endregion
+		#pragma endregion
 		static string ToBase64String(string encode) {
 			const string base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 			unsigned int in_len = encode.length();
@@ -82,8 +235,7 @@ namespace CSP {
 				}
 			}
 
-			if (i)
-			{
+			if (i) {
 				for (j = i; j < 3; j++) {
 					char_array_3[j] = '\0';
 				}
@@ -100,12 +252,8 @@ namespace CSP {
 				while ((i++ < 3)) {
 					ret += '=';
 				}
-
-
 			}
-
 			return ret;
-
 		}
 		static string FromBase64String(string const& encoded_string) {
 			const string base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
