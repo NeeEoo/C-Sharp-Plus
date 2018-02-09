@@ -10,21 +10,67 @@ namespace CSP {
 	//using System;
 	class Console {
 	public:
-		static void WriteLine(string value) {
-			cout << value << "\n";
-		}
-		static void WriteLine(int value) {
-			cout << value << "\n";
-		}
-		static void WriteLine() {
-			cout << "\n";
-		}
-		static void Write(string value) {
-			cout << value;
-		}
-		static void Write(int value) {
-			cout << value;
-		}
+		#pragma region WriteLine()
+			static void WriteLine(string value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(int value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(float value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(double value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(size_t value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(long value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(short value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(char value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(byte value) {
+				cout << value << "\n";
+			}
+			static void WriteLine() {
+				cout << "\n";
+			}
+		#pragma endregion
+		#pragma region Write()
+			static void Write(string value) {
+				cout << value;
+			}
+			static void Write(int value) {
+				cout << value;
+			}
+			static void Write(float value) {
+				cout << value;
+			}
+			static void Write(double value) {
+				cout << value;
+			}
+			static void Write(size_t value) {
+				cout << value;
+			}
+			static void Write(long value) {
+				cout << value;
+			}
+			static void Write(short value) {
+				cout << value;
+			}
+			static void Write(char value) {
+				cout << value;
+			}
+			static void Write(byte value) {
+				cout << value;
+			}
+		#pragma endregion
 		static string ReadLine() {
 			string s;
 			getline(cin, s);

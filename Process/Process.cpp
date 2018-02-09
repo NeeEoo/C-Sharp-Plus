@@ -12,6 +12,10 @@ namespace CSP {
 		{
 			system(program.c_str());
 		}
+		static void Start(const char * program)
+		{
+			system(program);
+		}
 		/*static void StartInBackground(string program)
 		{
 		string a = "start ";

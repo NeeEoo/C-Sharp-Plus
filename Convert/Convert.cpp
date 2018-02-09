@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <sstream>
 
 using std::string;
 
@@ -51,6 +52,11 @@ namespace CSP {
 			static short ToInt16(bool value) {
 				return value ? 1 : 0;
 			}
+			static short ToInt16(size_t value) {
+				size_t a = value;
+				short b;
+				return b = a;
+			}
 		#pragma endregion
 		#pragma region ToInt32()
 			static int ToInt32(string value) {
@@ -92,6 +98,11 @@ namespace CSP {
 			static int ToInt32(bool value) {
 				return value ? 1 : 0;
 			}
+			static int ToInt32(size_t value) {
+				size_t a = value;
+				int b;
+				return b = a;
+			}
 		#pragma endregion
 		#pragma region ToInt64()
 			static long ToInt64(string value) {
@@ -130,6 +141,11 @@ namespace CSP {
 			}
 			static long ToInt64(int value) {
 				int a = value;
+				long b;
+				return b = a;
+			}
+			static long ToInt64(size_t value) {
+				size_t a = value;
 				long b;
 				return b = a;
 			}
@@ -174,6 +190,11 @@ namespace CSP {
 				double b;
 				return b = a;
 			}
+			static double ToDouble(size_t value) {
+				size_t a = value;
+				double b;
+				return b = a;
+			}
 		#pragma endregion
 		#pragma region ToBoolean()
 			static bool ToBoolean(bool value) {
@@ -181,6 +202,21 @@ namespace CSP {
 			}
 			static bool ToBoolean(int value) {
 				return (value == 1);
+			}
+			static bool ToBoolean(short value) {
+				return (value == 1);
+			}
+			static bool ToBoolean(long value) {
+				return (value == 1);
+			}
+			static bool ToBoolean(double value) {
+				return (value == 1);
+			}
+			static bool ToBoolean(size_t value) {
+				return (value == 1);
+			}
+			static bool ToBoolean(string value) {
+				return (stoi(value) == 1);
 			}
 		#pragma endregion
 		#pragma region ToString()
@@ -207,6 +243,11 @@ namespace CSP {
 			}
 			static string ToString(byte value) {
 				return to_string(value);
+			}
+			static string ToString(size_t value) {
+				stringstream ss;
+				ss << value;
+				return ss.str();
 			}
 		#pragma endregion
 		static string ToBase64String(string encode) {
