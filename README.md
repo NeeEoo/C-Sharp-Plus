@@ -10,7 +10,7 @@ In your c++ program include `csp.h`. (will come later)
 
 `#include "csp.h"`
 
-Add `using CSP;` to use C-Sharp-Plus functions without typing `CSP::` first.
+Add `using namespace CSP;` to use C-Sharp-Plus functions without typing `CSP::` first.
 
 Then you can use all C-Sharp-Plus functions.
 
