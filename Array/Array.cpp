@@ -1,7 +1,4 @@
 #include "stdafx.h"
-#include <array>
-#include <algorithm>
-#include <iterator>
 
 using namespace std;
 namespace CSP {
