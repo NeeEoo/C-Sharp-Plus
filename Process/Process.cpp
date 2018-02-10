@@ -16,12 +16,5 @@ namespace CSP {
 		{
 			system(program);
 		}
-		/*static void StartInBackground(string program)
-		{
-		string a = "start ";
-		string b;
-		b = a + program;
-		system(b.c_str());
-		}*/
 	};
 }
