@@ -17,4 +17,5 @@ Then you can use all C-Sharp-Plus functions.
 ## Some things i still need to do
 
 - [ ] Add more functions
-- [ ] Add linux support
+- [ ] Add more overloads
+- [ ] Add Linux support
