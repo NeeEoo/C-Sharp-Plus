@@ -6,6 +6,7 @@
 using namespace std;
 
 namespace CSP {
+	//using System;
 	class Guid {
 	public:
 		static string NewGuid() {
