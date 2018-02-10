@@ -249,6 +249,9 @@ namespace CSP {
 				ss << value;
 				return ss.str();
 			}
+			static string ToString(wstring value) {
+				return string(value.begin(), value.end());
+			}
 		#pragma endregion
 		static string ToBase64String(string encode) {
 			const string base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";

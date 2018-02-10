@@ -12,7 +12,7 @@ namespace CSP {
 		{
 			system(program.c_str());
 		}
-		static void Start(const char * program)
+		static void Start(const char *program)
 		{
 			system(program);
 		}

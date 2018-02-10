@@ -76,6 +76,7 @@ namespace CSP {
 			getline(cin, s);
 			return s;
 		}
+		//Clears the console buffer and corresponding console window of display information.
 		static void Clear()
 		{
 			HANDLE						hStdOut;
@@ -104,15 +105,20 @@ namespace CSP {
 			}
 			SetConsoleCursorPosition(hStdOut, homeCoords);
 		}
+		//Sets the position of the cursor.
 		static void SetCursorPosition(int left, int top)
 		{
 			COORD p = { left, top };
 			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
 		}
+		//Gets or sets the title to display in the console title bar.
+		//CSP: Get is not yet implemented
 		static bool Title(string const & title)
 		{
 			return SetConsoleTitleA(title.data()) != 0;
 		}
+		//Gets or sets the title to display in the console title bar.
+		//CSP: Get is not yet implemented
 		static bool Title(wstring const & title)
 		{
 			return SetConsoleTitleW(title.data()) != 0;

@@ -33,9 +33,16 @@ namespace CSP {
 			wstring wStr = name;
 			return string(wStr.begin(), wStr.end());
 		}
+		//Gets the user name of the person who is currently logged on to the Windows operating system.
 		static const string	UserName = PrivateUserName();
+
+		//Gets the NetBIOS name of this local computer.
 		static const string	MachineName = PrivateMachineName();
+
+		//Gets the newline string defined for this environment.
 		static const string	NewLine = ENVNEWLINE;
+
+		//Gets the number of processors on the current machine.
 		static const int	ProcessorCount = thread::hardware_concurrency();
 	}
 }
