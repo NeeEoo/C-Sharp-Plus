@@ -252,6 +252,25 @@ namespace CSP {
 			static string ToString(wstring value) {
 				return string(value.begin(), value.end());
 			}
+			static string ToString(DWORD value) {
+				return to_string(value);
+			}
+			static string ToString(TCHAR value) {
+				return to_string(value);
+			}
+			static string ToString(LPDWORD value) {
+				stringstream ss;
+				ss << value;
+				return ss.str();
+			}
+			static string ToString(LPSTR value) {
+				stringstream ss;
+				ss << value;
+				return ss.str();
+			}
+			static string ToString(WORD value) {
+				return to_string(value);
+			}
 		#pragma endregion
 		static string ToBase64String(string encode) {
 			const string base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";

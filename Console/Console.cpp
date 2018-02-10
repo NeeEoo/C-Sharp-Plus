@@ -38,6 +38,24 @@ namespace CSP {
 			static void WriteLine(byte value) {
 				cout << value << "\n";
 			}
+			static void WriteLine(LPCWSTR value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(wstring value) {
+				cout << string(value.begin(), value.end()) << "\n";
+			}
+			static void WriteLine(DWORD value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(TCHAR value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(LPDWORD value) {
+				cout << value << "\n";
+			}
+			static void WriteLine(LPSTR value) {
+				cout << value << "\n";
+			}
 			static void WriteLine() {
 				cout << "\n";
 			}
@@ -68,6 +86,24 @@ namespace CSP {
 				cout << value;
 			}
 			static void Write(byte value) {
+				cout << value;
+			}
+			static void Write(LPCWSTR value) {
+				cout << value;
+			}
+			static void Write(wstring value) {
+				cout << string(value.begin(), value.end());
+			}
+			static void Write(DWORD value) {
+				cout << value;
+			}
+			static void Write(TCHAR value) {
+				cout << value;
+			}
+			static void Write(LPDWORD value) {
+				cout << value;
+			}
+			static void Write(LPSTR value) {
 				cout << value;
 			}
 		#pragma endregion
