@@ -16,5 +16,13 @@ namespace CSP {
 		{
 			system(program);
 		}
+		static void Start(wstring program)
+		{
+			system(string(program.begin(), program.end()).c_str());
+		}
+		static void Start(const wchar_t *program)
+		{
+			system(string(wstring(program).begin(), wstring(program).end()).c_str());
+		}
 	};
 }

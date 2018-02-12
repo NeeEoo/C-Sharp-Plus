@@ -16,6 +16,22 @@ namespace CSP {
 				short b;
 				return b = a;
 			}
+			static short ToInt16(const char *value) {
+				int a = stoi(value);
+				short b;
+				return b = a;
+			}
+			static short ToInt16(wstring value) {
+				int a = stoi(value);
+				short b;
+				return b = a;
+			}
+			static short ToInt16(const wchar_t *value) {
+				int a = stoi(value);
+				short b;
+				return b = a;
+			}
+
 			static short ToInt16(int value) {
 				int a = value;
 				short b;
@@ -62,6 +78,15 @@ namespace CSP {
 		#pragma endregion
 		#pragma region ToInt32()
 			static int ToInt32(string value) {
+				return stoi(value);
+			}
+			static int ToInt32(const char *value) {
+				return stoi(value);
+			}
+			static int ToInt32(wstring value) {
+				return stoi(value);
+			}
+			static int ToInt32(const wchar_t *value) {
 				return stoi(value);
 			}
 #ifdef _CONSOLE //Console Application
@@ -112,6 +137,15 @@ namespace CSP {
 			static long ToInt64(string value) {
 				return stol(value);
 			}
+			static long ToInt64(const char *value) {
+				return stol(value);
+			}
+			static long ToInt64(wstring value) {
+				return stol(value);
+			}
+			static long ToInt64(const wchar_t *value) {
+				return stol(value);
+			}
 			static long ToInt64(long value) {
 				return value;
 			}
@@ -158,6 +192,15 @@ namespace CSP {
 		#pragma endregion
 		#pragma region ToDouble()
 			static double ToDouble(string value) {
+				return stod(value);
+			}
+			static double ToDouble(const char *value) {
+				return stod(value);
+			}
+			static double ToDouble(wstring value) {
+				return stod(value);
+			}
+			static double ToDouble(const wchar_t *value) {
 				return stod(value);
 			}
 			static double ToDouble(double value) {
@@ -226,6 +269,15 @@ namespace CSP {
 			static bool ToBoolean(string value) {
 				return (stoi(value) == 1);
 			}
+			static bool ToBoolean(wstring value) {
+				return (stoi(value) == 1);
+			}
+			static bool ToBoolean(const char *value) {
+				return (stoi(value) == 1);
+			}
+			static bool ToBoolean(const wchar_t *value) {
+				return (stoi(value) == 1);
+			}
 		#pragma endregion
 		#pragma region ToString()
 			static string ToString(int value) {
@@ -233,6 +285,9 @@ namespace CSP {
 			}
 			static string ToString(string value) {
 				return value;
+			}
+			static string ToString(const char *value) {
+				return string(value);
 			}
 			static string ToString(long value) {
 				return to_string(value);
@@ -261,6 +316,9 @@ namespace CSP {
 			}
 			static string ToString(wstring value) {
 				return string(value.begin(), value.end());
+			}
+			static string ToString(const wchar_t *value) {
+				return string(wstring(value).begin(), wstring(value).end());
 			}
 			static string ToString(DWORD value) {
 				return to_string(value);
