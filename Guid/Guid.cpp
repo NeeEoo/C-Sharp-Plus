@@ -2,6 +2,9 @@
 #include <sstream>
 #include <windows.h>
 #include <iomanip>
+#ifndef _CONSOLE //Win32 Application
+#include "combaseapi.h"
+#endif
 
 using namespace std;
 

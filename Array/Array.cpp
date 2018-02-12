@@ -307,6 +307,7 @@ namespace CSP {
 				}
 				return index;
 			}
+#ifdef _CONSOLE //Console Application
 			template <std::size_t N>
 			static int IndexOf(byte(&array)[N], byte value) {
 				int size = sizeof(array) / sizeof(*array);
@@ -367,6 +368,7 @@ namespace CSP {
 				}
 				return index;
 			}
+#endif
 			template <std::size_t N>
 			static int IndexOf(char(&array)[N], char value) {
 				int size = sizeof(array) / sizeof(*array);
@@ -889,6 +891,7 @@ namespace CSP {
 				}
 				return index;
 			}
+#ifdef _CONSOLE //Console Application
 			template <std::size_t N>
 			static int LastIndexOf(byte(&array)[N], byte value) {
 				int size = sizeof(array) / sizeof(*array);
@@ -945,6 +948,7 @@ namespace CSP {
 				}
 				return index;
 			}
+#endif
 			template <std::size_t N>
 			static int LastIndexOf(char(&array)[N], char value) {
 				int size = sizeof(array) / sizeof(*array);

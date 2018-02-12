@@ -39,11 +39,13 @@ namespace CSP {
 				short b;
 				return b = a;
 			}
+#ifdef _CONSOLE //Console Application
 			static short ToInt16(byte value) {
 				byte a = value;
 				short b;
 				return b = a;
 			}
+#endif
 			static short ToInt16(double value) {
 				double a = value;
 				short b;
@@ -62,11 +64,13 @@ namespace CSP {
 			static int ToInt32(string value) {
 				return stoi(value);
 			}
+#ifdef _CONSOLE //Console Application
 			static int ToInt32(byte value) {
 				byte a = value;
 				int b;
 				return b = a;
 			}
+#endif
 			static int ToInt32(long value) {
 				long a = value;
 				int b;
@@ -114,11 +118,13 @@ namespace CSP {
 			static long ToInt64(bool value) {
 				return value ? 1 : 0;
 			}
+#ifdef _CONSOLE //Console Application
 			static long ToInt64(byte value) {
 				byte a = value;
 				long b;
 				return b = a;
 			}
+#endif
 			static long ToInt64(char value) {
 				char a = value;
 				long b;
@@ -165,11 +171,13 @@ namespace CSP {
 			static double ToDouble(bool value) {
 				return value ? 1 : 0;
 			}
+#ifdef _CONSOLE //Console Application
 			static double ToDouble(byte value) {
 				byte a = value;
 				double b;
 				return b = a;
 			}
+#endif
 			static double ToDouble(char value) {
 				char a = value;
 				double b;
@@ -241,9 +249,11 @@ namespace CSP {
 			static string ToString(double value) {
 				return to_string(value);
 			}
+#ifdef _CONSOLE //Console Application
 			static string ToString(byte value) {
 				return to_string(value);
 			}
+#endif
 			static string ToString(size_t value) {
 				stringstream ss;
 				ss << value;
