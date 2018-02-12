@@ -18,4 +18,5 @@ Then you can use all C-Sharp-Plus functions.
 
 - [ ] Add more functions
 - [ ] Add more overloads
+- [ ] Add getters
 - [ ] Add Linux support
