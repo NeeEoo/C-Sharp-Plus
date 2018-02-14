@@ -31,7 +31,6 @@ namespace CSP {
 				short b;
 				return b = a;
 			}
-
 			static short ToInt16(int value) {
 				int a = value;
 				short b;
@@ -252,39 +251,44 @@ namespace CSP {
 				return value;
 			}
 			static bool ToBoolean(int value) {
-				return (value == 1);
+				return value != 0;
 			}
 			static bool ToBoolean(short value) {
-				return (value == 1);
+				return value != 0;
 			}
 			static bool ToBoolean(long value) {
-				return (value == 1);
+				return value != 0;
 			}
 			static bool ToBoolean(double value) {
-				return (value == 1);
+				return value != 0;
 			}
 			static bool ToBoolean(size_t value) {
-				return (value == 1);
+				return value;
 			}
 			static bool ToBoolean(string value) {
-				return (stoi(value) == 1);
+				return stoi(value) != 0;
 			}
 			static bool ToBoolean(wstring value) {
-				return (stoi(value) == 1);
+				return stoi(value) != 0;
 			}
 			static bool ToBoolean(const char *value) {
-				return (stoi(value) == 1);
+				return stoi(value) != 0;
 			}
 			static bool ToBoolean(const wchar_t *value) {
-				return (stoi(value) == 1);
+				return stoi(value) != 0;
+			}
+		#pragma endregion
+		#pragma region ToChar()
+			static char ToChar(char value) {
+				return value;
 			}
 		#pragma endregion
 		#pragma region ToString()
-			static string ToString(int value) {
-				return to_string(value);
-			}
 			static string ToString(string value) {
 				return value;
+			}
+			static string ToString(int value) {
+				return to_string(value);
 			}
 			static string ToString(const char *value) {
 				return string(value);

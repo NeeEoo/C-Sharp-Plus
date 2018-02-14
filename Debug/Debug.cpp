@@ -23,11 +23,13 @@ namespace CSP {
 			value = value + "\n";
 			OutputDebugStringA(value.c_str());
 		}
-		static void WriteLine(const char *value) {
+		//Error: Unexpected Result
+		/*static void WriteLine(const char * value) {
 			const char* s = "\n";
 			value = value + *s;
 			OutputDebugStringA(value);
-		}
+		}*/
+
 		static void WriteLine(wstring value) {
 			wstring s = L"\n";
 			value = value.c_str() + s;
